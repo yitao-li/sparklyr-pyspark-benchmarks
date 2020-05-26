@@ -21,6 +21,8 @@ cat(system.time(
                             function(df) {
                               for (col in colnames(df))
                                 df[[col]] <- sapply(df[[col]], function(x) x * x)
-                            }) %>%
+			      df
+                            },
+			    packages = FALSE) %>%
                 sdf_collect()
 )[[3]], "\n")
