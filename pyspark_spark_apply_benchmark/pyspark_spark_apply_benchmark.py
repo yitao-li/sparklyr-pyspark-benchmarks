@@ -9,7 +9,7 @@ spark = SparkSession\
         .appName("pyspark_benchmark")\
         .getOrCreate()
 
-df = pd.DataFrame(np.random.randint(-2147483648, 2147483647,size=(100000, 10)), columns=list('ABCDEFGHIJ'))
+df = pd.DataFrame(np.random.randint(-2147483648, 2147483647,size=(1000, 10)), columns=list('ABCDEFGHIJ'))
 sdf = spark.createDataFrame(df)
 
 @udf("double")

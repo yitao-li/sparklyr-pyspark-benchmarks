@@ -4,7 +4,7 @@ spark_master <- Sys.getenv("SPARK_MASTER")
 spark_home <- Sys.getenv("SPARK_HOME")
 enable_arrow <- Sys.getenv("ENABLE_ARROW")
 
-df <- data.frame(lapply(seq(10), function(c) sapply(runif(n = 100000, min = -2147483648, max = 2147483647), as.integer)))
+df <- data.frame(lapply(seq(10), function(c) sapply(runif(n = 1000, min = -2147483648, max = 2147483647), as.integer)))
 colnames(df) <- c("A", "B", "C", "D", "E", "F", "G", "H", "I", "J")
 
 config <- spark_config()
