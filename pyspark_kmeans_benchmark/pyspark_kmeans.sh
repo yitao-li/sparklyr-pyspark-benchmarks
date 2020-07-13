@@ -10,4 +10,4 @@ rm -f "$OUTPUT"
 
 "$SPARK_HOME"/bin/spark-submit \
   --master "$SPARK_MASTER" \
-  "$(dirname "$(readlink -f "$0")")"/pyspark_kmeans.py | tee -a "$OUTPUT"
+  "$(dirname "$(readlink -f "$0")")"/pyspark_kmeans.py 2>/dev/null | tee -a "$OUTPUT"
