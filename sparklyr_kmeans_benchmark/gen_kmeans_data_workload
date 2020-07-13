@@ -1,0 +1,17 @@
+spark-bench = {
+  spark-submit-config = [{
+    workload-suites = [
+      {
+        workloads = [
+          {
+            name = "data-generation-kmeans"
+            output = "/tmp/spark-bench-test/kmeans-data.parquet"
+            rows = 1000000
+            cols = 14
+            k = 3
+          }
+        ]
+      }
+    ]
+  }]
+}
