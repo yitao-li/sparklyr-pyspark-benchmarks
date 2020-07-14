@@ -1,0 +1,16 @@
+spark-bench = {
+  spark-submit-config = [{
+    workload-suites = [
+      {
+        workloads = [
+          {
+            name = "data-generation-lr"
+            output = "/tmp/spark-bench-test/lr-data.json"
+            rows = 1000000
+            cols = 24
+          }
+        ]
+      }
+    ]
+  }]
+}
